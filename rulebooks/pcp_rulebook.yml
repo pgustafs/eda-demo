@@ -9,7 +9,7 @@
       condition: event.payload.pcp.pmie.rule == "High average processor utilization"      
       action:
         run_job_template:
-          name: eda-test
+          name: "EDA PCP Test"
           organization: Default
 
     - name:  Display contents of event.payload variable
