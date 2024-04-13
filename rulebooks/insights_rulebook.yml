@@ -16,3 +16,10 @@
           organization: Default
           job_args: 
             extra_vars: "{{ event.payload }}"
+            
+    - name:  Display contents of event.payload variable
+      condition: event.payload is defined
+      action:
+        debug:
+          msg: "Received: {{ event.payload }}"
+          
